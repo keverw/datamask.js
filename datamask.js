@@ -21,7 +21,7 @@
 
             var offset = Math.floor((len - mask_count) / 2);
 
-            var masked = value . substr(0, offset) + str_repeat(mask_char, mask_count) + value.substr(mask_count + offset);
+            var masked = value.substr(0, offset) + str_repeat(mask_char, mask_count) + value.substr(mask_count + offset);
             return masked;
         }
         else
@@ -32,52 +32,52 @@
 
     function domain(value, mask_char, percent)
     {
-    
-    	if (value.indexOf('.') !== -1)
+
+        if (value.indexOf('.') !== -1)
         {
-        	var domain_parts = value.split('.');
-        	
-        	var partsleft = domain_parts.length;
-        	
-        	var domainoutput = '';
-        	for (var val in domain_parts)
-        	{
-        		if (partsleft > 1)
-        		{
-        			domainoutput += string(domain_parts[val], mask_char, percent) + '.';
-        		}
-        		else
-        		{
-        			domainoutput += domain_parts[val];
-        		}
-        		partsleft--;
-        	}
-        	return domainoutput;
-        	
+            var domain_parts = value.split('.');
+
+            var partsleft = domain_parts.length;
+
+            var domainoutput = '';
+            for (var val in domain_parts)
+            {
+                if (partsleft > 1)
+                {
+                    domainoutput += string(domain_parts[val], mask_char, percent) + '.';
+                }
+                else
+                {
+                    domainoutput += domain_parts[val];
+                }
+                partsleft--;
+            }
+            return domainoutput;
+
         }
         else
         {
-        	return string(value, mask_char, percent);
+            return string(value, mask_char, percent);
         }
     }
 
     function email(address, mask_char, user_percent, domain_percent)
     {
-    	if (mask_char == null)
-    	{
-    		mask_char = '*';
-    	}
-    	
-    	if (user_percent == null)
-    	{
-    		user_percent = 50;
-    	}
-    	
-    	if (domain_percent == null)
-    	{
-    		domain_percent = 60;
-    	}
-    
+        if (mask_char == null)
+        {
+            mask_char = '*';
+        }
+
+        if (user_percent == null)
+        {
+            user_percent = 50;
+        }
+
+        if (domain_percent == null)
+        {
+            domain_percent = 60;
+        }
+
         if (address.indexOf('@') !== -1) //has @ symbol
         {
             var email_parts = address.split('@');
