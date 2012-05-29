@@ -176,7 +176,33 @@
 
     function domain(value, mask_char, percent)
     {
-        return value;
+    
+    	if (value.indexOf('.') !== -1)
+        {
+        	var domain_parts = value.split('.');
+        	
+        	var partsleft = domain_parts.length;
+        	
+        	var domainoutput = '';
+        	for (var val in domain_parts)
+        	{
+        		if (partsleft > 1)
+        		{
+        			domainoutput += string(domain_parts[val], mask_char, percent) + '.';
+        		}
+        		else
+        		{
+        			domainoutput += domain_parts[val];
+        		}
+        		partsleft--;
+        	}
+        	return domainoutput;
+        	
+        }
+        else
+        {
+        	return string(value, mask_char, percent);
+        }
     }
 
     function email(address)
