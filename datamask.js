@@ -61,7 +61,7 @@
         }
     }
 
-    function email(address, mask_char, user_percent)
+    function email(address, mask_char, user_percent, domain_percent)
     {
     	if (mask_char == null)
     	{
@@ -72,13 +72,18 @@
     	{
     		user_percent = 50;
     	}
+    	
+    	if (domain_percent == null)
+    	{
+    		domain_percent = 60;
+    	}
     
         if (address.indexOf('@') !== -1) //has @ symbol
         {
             var email_parts = address.split('@');
 
             var masked_user = string(email_parts[0], mask_char, user_percent);
-            var masked_domain = domain(email_parts[1], mask_char, 60);
+            var masked_domain = domain(email_parts[1], mask_char, domain_percent);
             return (masked_user + '@' + masked_domain);
         }
         else //else no at, just mask the whole input
