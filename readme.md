@@ -5,7 +5,7 @@ A simple module to mask emails, domains and even regular strings!
 ## Setup ##
 To set up datamask.js on your Node.js server use npm.
 
-    npm install {LATER}  
+    npm install datamask  
 
 ## Example Usage ##
 
