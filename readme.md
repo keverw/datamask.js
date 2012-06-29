@@ -10,7 +10,7 @@ To set up datamask.js on your Node.js server use npm.
 ## Example Usage ##
 
 ```
-var datamask = require('./datamask.js');
+var datamask = require('datamask');
 
 //email(address, mask_char, user_percent, domain_percent)
 console.log(datamask.email('test@example.com')); //t**t@e****le.com
