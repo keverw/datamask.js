@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/keverw/datamask.js.png)](http://travis-ci.org/keverw/datamask.js)
 # datamask.js #
 
 A simple module to mask emails, domains and even regular strings!
