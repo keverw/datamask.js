@@ -16,5 +16,6 @@
   },
   "scripts": {
     "test": "node test.js"
-  }
+  },
+  "types": "index.d.ts"
 }
