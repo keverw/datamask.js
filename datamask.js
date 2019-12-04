@@ -14,6 +14,16 @@
 	//datamask.js
 	function string(value, mask_char, percent)
 	{
+		if (mask_char == null)
+		{
+			mask_char = "*";
+		}
+
+		if (percent == null)
+		{
+      		percent = 60;
+    	}
+
 		var len = value.length;
 		if (len > 0)
 		{
@@ -32,6 +42,15 @@
 
 	function domain(value, mask_char, percent)
 	{
+		if (mask_char == null)
+		{
+          mask_char = "*";
+        }
+
+		if (percent == null)
+		{
+          percent = 60;
+        }
 
 		if (value.indexOf('.') !== -1)
 		{
