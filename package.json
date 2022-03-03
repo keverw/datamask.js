@@ -2,7 +2,7 @@
   "author": "Kevin Whitman (https://github.com/keverw)",
   "name": "datamask",
   "description": "A simple module to mask emails, domains and even regular strings!",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/keverw/datamask.js"
